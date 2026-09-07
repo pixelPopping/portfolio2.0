@@ -1,0 +1,47 @@
+[
+  {
+    "title": "NoviNaut in Space Full-Stack Applicatie",
+    "imageSrc": "projects/project.png",
+    "description": "This is the Full-Stack version of NoviNaut in Space with a backend and database.",
+    "skills": [
+      "React",
+      "Axios",
+      "Context",
+      "React Router",
+      "React Hook Form",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "MongoDB",
+      "Mongoose",
+      "Vitest"
+    ],
+    "source": "https://github.com/pixelPopping/frontend.vs.python",
+    "demo": "https://frontend-vs-python-13.onrender.com/"
+  },
+  {
+    "title": "Stella@Bakery Full-Stack",
+    "imageSrc": "projects/project.png",
+    "description": "This is the Full-Stack version of CrapShop, currently in development.",
+    "skills": [
+      "CSS Modules",
+      "JWT Authentication",
+      "Input Validation",
+      "Error Handling",
+      "CRUD Operations",
+      "Data Migration",
+      "SQL Queries",
+      "Indexing and Query Optimization",
+      "Backups and Recovery",
+      "Debugging",
+      "Postman",
+      "Stripe Payments",
+      "Jest",
+      "React Testing Library",
+      "API Mocking",
+      "Async Testing"
+    ],
+    "source": "https://github.com/pixelPopping/Crapshop.Fullstack.git",
+    "demo": "https://crapshop-fullstack-3.onrender.com/"
+  }
+]

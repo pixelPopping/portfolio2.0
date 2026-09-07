@@ -1,0 +1,128 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 20px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Hero Image Styles */
+.heroImg {
+  width: 40%; /* Default size (40% of container width) */
+  max-width: 500px; /* Optional: set a max-width for the image */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1; /* Ensures the image stays above the blur effects */
+  border-radius: 100%; /* Make the image circular */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  animation-name: floating; /* Floating effect */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  object-fit: cover; /* Ensure the image fills the circular area without distortion */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Floating effect animation */
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -10px);
+  }
+}
+
+/* Hover Effect: Slight zoom on hover */
+.heroimg:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background-color: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  top: 264px;
+  right: -25vw;
+  border-radius: 764px;
+  background-color: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Responsive Adjustment for Smaller Screens */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .content {
+    align-items: center;
+  }
+  .heroImg {
+    width: 60%; /* Increase width for smaller screens */
+    max-width: 400px; /* Optional: cap the width for mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between the text and image */
+  }
+}
