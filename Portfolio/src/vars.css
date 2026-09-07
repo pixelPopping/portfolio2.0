@@ -1,9 +1,22 @@
 :root {
-  --color-text: #fff;
-  --color-primary: #576cbc;
-  --color-secondary: #19376d;
-  --color-dark: #0b2447;
-  --color-bg: #04152d;
+  /* Background */
+  --color-bg: #ffffff;
+  --color-bg-light: #f8fafc;
 
-  --fonts-roboto: "roboto";
+  /* Text */
+  --color-text: #111827;
+  --color-text-light: #64748b;
+
+  /* Primary */
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+
+  /* Cards */
+  --color-card: #ffffff;
+
+  /* Accent */
+  --color-accent: #dbeafe;
 }
