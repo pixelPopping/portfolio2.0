@@ -1,0 +1,141 @@
+.hero {
+  background-color: var(--color-bg-light);
+  padding: 100px 0;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-eyebrow {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  margin-bottom: 25px;
+  color: var(--color-text);
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: var(--color-primary);
+}
+
+.hero-text {
+  margin-bottom: 20px;
+  color: var(--color-text-light);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.hero-buttons .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+
+/* Afbeelding */
+
+.hero-image-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 450px;
+}
+
+.hero-circle {
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.hero-image {
+  position: relative;
+
+  width: 340px;
+  height: 430px;
+
+  object-fit: cover;
+
+  border: 8px solid white;
+  border-radius: 170px 170px 20px 20px;
+
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Tablet / mobiel */
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .hero-image-wrapper {
+    min-height: 380px;
+  }
+
+  .hero-circle {
+    width: 290px;
+    height: 290px;
+  }
+
+  .hero-image {
+    width: 270px;
+    height: 350px;
+  }
+}

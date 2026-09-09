@@ -1,54 +1,85 @@
 import PropTypes from "prop-types";
-import styles from "./ProjectCard.module.css";
 import { getImageUrl } from "../../utils";
+import "./ProjectCard.css";
 
 export const ProjectCard = ({
-  project: { title, imageSrc, description, skills, demo, source },
+  project: {
+    title,
+    imageSrc,
+    description,
+    skills,
+    demo,
+    source,
+  },
 }) => {
   return (
-    <div className={styles.container}>
-      <img
-        src={getImageUrl(imageSrc)}
-        alt={`Image of ${title}`}
-        className={styles.image}
-      />
+    <article className="project-card">
 
-      <h3 className={styles.title}>{title}</h3>
+      {/* Image */}
+      <div className="project-image-wrapper">
+        <img
+          src={getImageUrl(imageSrc)}
+          alt={`Image of ${title}`}
+          className="project-image"
+        />
+      </div>
 
-      <p className={styles.description}>{description}</p>
 
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => (
-          <li key={id} className={styles.skill}>
-            {skill}
-          </li>
-        ))}
-      </ul>
+      {/* Content */}
+      <div className="project-content">
 
-      <div className={styles.links}>
-        {demo && (
+        <h3>{title}</h3>
+
+        <p>{description}</p>
+
+
+        {/* Skills */}
+        <ul className="project-skills">
+          {skills.slice(0, 5).map((skill) => (
+            <li key={skill}>
+              {skill}
+            </li>
+          ))}
+
+          {skills.length > 5 && (
+            <li className="more-skills">
+              +{skills.length - 5}
+            </li>
+          )}
+        </ul>
+
+
+        {/* Links */}
+        <div className="project-links">
+
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Live Demo →
+            </a>
+          )}
+
           <a
-            href={demo}
+            href={source}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.link}
+            className="btn btn-outline-dark"
           >
-            Demo
+            GitHub ↗
           </a>
-        )}
 
-        <a
-          href={source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          GitHub
-        </a>
+        </div>
+
       </div>
-    </div>
+
+    </article>
   );
 };
+
 
 ProjectCard.propTypes = {
   project: PropTypes.shape({
