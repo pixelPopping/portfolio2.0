@@ -1,5 +1,5 @@
 import { getImageUrl } from "../../utils";
-import "./About.css";
+import "./about.css";
 
 export const About = () => {
   return (
